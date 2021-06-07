@@ -1,6 +1,7 @@
 var calculateButton = document.getElementById("sum-button"); // creato la variabile con il button da cliccare
-
 var sumResult = document.getElementById("total-price"); // creata la variabile con il div per id dove stampare il prezzo finale
+
+var promoCode = "JUNE20"
 
 calculateButton.addEventListener ('click', function() {
     var sumPrice = 10; // prezzo base da sommare
@@ -12,7 +13,18 @@ calculateButton.addEventListener ('click', function() {
             sumPrice += parseInt(checkIngredients[i].value)
         }
     }
-    sumResult.innerHTML = "$ " + sumPrice; 
-})
 
+    var promoCodeAdded = document.getElementById("text-promo");
+    if ( promoCodeAdded === promoCode) {
+        var promoResult = (parseInt(sumPrice) * 20) / 100;
+        var finalResult = parseInt(sumPrice) - promoResult;
+    } else {
+        alert("Your discount code is invalid!")
+    }
+    
+    sumResult.innerHTML = "$ " + sumPrice; 
+});
+
+console.log(promoCodeAdded);
+console.log(promoCode);
 console.log(sumResult);
