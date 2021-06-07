@@ -13,15 +13,15 @@ calculateButton.addEventListener ('click', function() {
             sumPrice += parseInt(checkIngredients[i].value)
         }
     }
-
-    var promoCodeAdded = document.getElementById("text-promo");
-    if ( promoCodeAdded === promoCode) {
-        var promoResult = (parseInt(sumPrice) * 20) / 100;
-        var finalResult = parseInt(sumPrice) - promoResult;
-    } else {
-        alert("Your discount code is invalid!")
-    }
     
+    var promoCodeAdded = document.getElementById("text-promo");
+    if (promoCodeAdded === promoCode) {
+        var promoResult = (sumPrice * promoCodeAdded.value) / 100;
+        var finalResult = parseInt(sumPrice) - promoResult;
+    } // else {
+        // alert("Your discount code is invalid!");
+        // } 
+        
     sumResult.innerHTML = "$ " + sumPrice; 
 });
 
