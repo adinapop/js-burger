@@ -1,0 +1,87 @@
+.second-section {background-color: #fff5e2;}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header > h1 {
+    font-size: 30px;
+    align-self: center;
+}
+
+.burger-img-top {
+    width: 150px;
+}
+
+.burger-img-top > img {
+    width: 100%;
+}
+
+section > p {
+    font-size: 20px;
+}
+
+.name-your-burger-button::placeholder {
+    color: black;
+    font-size: 22px;
+}
+
+.name-your-burger-button {
+    border: 1px solid white;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+}
+
+.img-container > span, .img-container > input, .img-container > label {
+    padding: 16px;
+}
+
+.img-container > label {color: red;}
+
+.img-box-container {width: 40px;}
+
+.img-box-container > img {width: 100%;}
+
+.sale-code-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+}
+
+.sale-code::placeholder {
+    font-size: 14px;
+}
+
+.sale-code {
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: #fff5e2;
+    width: 450px;
+}
+
+.button-calculate {
+    text-align: center;
+}
+
+.button-calculate > button {
+    margin-bottom: 100px;
+    font-weight: bold;
+    background-color: #fdbb40;
+    padding: 10px 24px;
+    border: 1px solid #fdbb40;
+    border-radius: 8px;
+}
+
+footer {
+    padding: 30px;
+    background-color: #d33359;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}

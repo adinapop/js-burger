@@ -6,11 +6,8 @@ calculateButton.addEventListener ('click', function() {
     var sumPrice = 10; 
     var checkIngredients = document.getElementsByClassName("ingredients");
     var promoCode = "JUNE20";
-    var promoCodeAdded = document.getElementById("text-promo").value;
-   
-    console.log(promoCodeAdded);
-    console.log(sumResult);
-
+    var promoCodeAdded = document.getElementById("text-promo");
+    
     for (var i = 0; i < checkIngredients.length; i++) {
         if (checkIngredients[i].checked) {
             sumPrice += parseInt(checkIngredients[i].value);
@@ -18,7 +15,7 @@ calculateButton.addEventListener ('click', function() {
         }
     }
     
-    if (promoCodeAdded === promoCode) {
+    if (promoCodeAdded.value === promoCode) {
         alert("Discount code applied! Press OK to see your new Burger Price!")
         sumResult.innerHTML = "$ " + (sumPrice * ((100 - 20) / 100)).toFixed(2);
     } 
