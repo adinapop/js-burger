@@ -1,30 +1,31 @@
 var calculateButton = document.getElementById("sum-button"); // creato la variabile con il button da cliccare
 var sumResult = document.getElementById("total-price"); // creata la variabile con il div per id dove stampare il prezzo finale
 
-var promoCode = "JUNE20"
 
 calculateButton.addEventListener ('click', function() {
-    var sumPrice = 10; // prezzo base da sommare
+    var sumPrice = 10; 
     var checkIngredients = document.getElementsByClassName("ingredients");
-    // gli elementi da prendere per classe in modo tale da poter poi ciclare all'interno
+    var promoCode = "JUNE20";
+    var promoCodeAdded = document.getElementById("text-promo").value;
+   
+    console.log(promoCodeAdded);
+    console.log(sumResult);
 
     for (var i = 0; i < checkIngredients.length; i++) {
         if (checkIngredients[i].checked) {
-            sumPrice += parseInt(checkIngredients[i].value)
+            sumPrice += parseInt(checkIngredients[i].value);
+            sumResult.innerHTML = "$ " + sumPrice; 
         }
     }
     
-    var promoCodeAdded = document.getElementById("text-promo");
     if (promoCodeAdded === promoCode) {
-        var promoResult = (sumPrice * promoCodeAdded.value) / 100;
-        var finalResult = parseInt(sumPrice) - promoResult;
-    } // else {
-        // alert("Your discount code is invalid!");
-        // } 
-        
-    sumResult.innerHTML = "$ " + sumPrice; 
+        alert("Discount code applied! Press OK to see your new Burger Price!")
+        sumResult.innerHTML = "$ " + (sumPrice * ((100 - 20) / 100)).toFixed(2);
+    } 
+    // else {
+    //     alert("Your discount code is invalid!");
+    // } 
 });
 
-console.log(promoCodeAdded);
-console.log(promoCode);
-console.log(sumResult);
+// PROBLEM1: Se metto value=20 all'interno di input in HTML esce fuori la scritta 20 nel placeholder
+// PROBLEM2: Non capisco perché non funziona .value nel promoCodeAdded e stampa l'alert anche quando non c'è nulla
