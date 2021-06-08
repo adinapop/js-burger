@@ -12,102 +12,91 @@
 </head>
 
 <body>
+    <div class="container-fluid">
+        <div class="row col-6">
 
-    <div class="container-fluid first-section">
-        <div class="row">
-            <div class="col-6">
-
-                <div class="container">
-                    <div class="row">
-
-                        <header>
-                            <h1>Create Your Burger</h1>
-                            <div class="burger-img-top">
-                                <img src="./img/burger-top.png" alt="Burger Image">
-                            </div>
-                        </header>
-        
-                        <section>
-                            <input type="text" id="burger-name" class="name-your-burger-button" placeholder="Name Your Burger">
-                            <label for="burger-name"></label>
-                            <p>Ingredients</p>
-                        </section>
-
-                        <div class="col-6 img-container">
-                            <div class="img-box-container">
-                                <img src="./img/cheese.svg" alt="Cheese Image">
-                            </div>
-                            <span>Cheese</span>
-                            <input type="checkbox" id="check-cheese" class="ingredients" value="4">
-                            <label for="check-cheese">add</label>
-                        </div>
-                        <div class="col-6 img-container">
-                            <div class="img-box-container">
-                                <img src="./img/tomato.svg" alt="Tomato Image">
-                            </div>
-                            <span>Tomato</span>
-                            <input type="checkbox" id="check-tomato" class="ingredients" value="4">
-                            <label for="check-tomato">add</label>
-                        </div>
-                        <div class="col-6 img-container">
-                            <div class="img-box-container">
-                                <img src="./img/fried-egg.svg" alt="Fried Egg Image">
-                            </div>
-                            <span>Egg</span>
-                            <input type="checkbox" id="check-egg" class="ingredients" value="4">
-                            <label for="check-egg">add</label>
-                        </div>
-                        <div class="col-6 img-container">
-                            <div class="img-box-container">
-                                <img src="./img/lettuce.svg" alt="Lettuce Image">
-                            </div>
-                            <span>Lettuce</span>
-                            <input type="checkbox" id="check-lettuce" class="ingredients" value="4">
-                            <label for="check-lettuce">add</label>
-                        </div>
-                        <div class="col-6 img-container">
-                            <div class="img-box-container">
-                                <img src="./img/mustard.svg" alt="Mustard Image">
-                            </div>
-                            <span>Mustard</span>
-                            <input type="checkbox" id="check-mustard" class="ingredients" value="2">
-                            <label for="check-mustard">add</label>
-                        </div>
-                        <div class="col-6 img-container">
-                            <div class="img-box-container">
-                                <img src="./img/ketchup.svg" alt="Ketchup Image">
-                            </div>
-                            <span>Ketchup</span>
-                            <input type="checkbox" id="check-ketchup" class="ingredients" value="2">
-                            <label for="check-ketchup">add</label>
-                        </div>
-
-                        <div class="sale-code-container">
-                            <span>Discount Coupon</span>
-                            <input type="text" id="text-promo" class="sale-code" placeholder="Type here..">
-                            <label for="text-promo"></label>
-                        </div>
-        
-                        <div class="button-calculate">
-                            <button id="sum-button">calculate</button>
-                        </div>
-        
-                        <footer>
-                            <div>TOTAL PRICE</div>
-                            <div id="total-price">$ 10</div>
-                        </footer>
-                        
-                    </div>
+            <header class="row justify-content-between">
+                <h1 class="col-6">Create Your Burger</h1>
+                <div class="burger-img-top col-6">
+                    <img src="./img/burger-top.png" alt="Burger Image">
                 </div>
-            </div>
-            <div class="col-6 second-section"></div>
+            </header>
+
+            <section>
+                <input type="text" id="burger-name" class="name-your-burger-button" placeholder="Name Your Burger">
+                <label for="burger-name"></label>
+                <p>Ingredients</p>
+            </section>
+
+            <section class="row">
+                <div class="col-6 img-container">
+                    <div class="img-box-container">
+                        <img src="./img/cheese.svg" alt="Cheese Image">
+                    </div>
+                    <span>Cheese</span>
+                    <input type="checkbox" id="check-cheese" class="ingredients" value="4">
+                    <label for="check-cheese">add</label>
+                </div>
+                <div class="col-6 img-container">
+                    <div class="img-box-container">
+                        <img src="./img/tomato.svg" alt="Tomato Image">
+                    </div>
+                    <span>Tomato</span>
+                    <input type="checkbox" id="check-tomato" class="ingredients" value="4">
+                    <label for="check-tomato">add</label>
+                </div>
+                <div class="col-6 img-container">
+                    <div class="img-box-container">
+                        <img src="./img/fried-egg.svg" alt="Fried Egg Image">
+                    </div>
+                    <span>Egg</span>
+                    <input type="checkbox" id="check-egg" class="ingredients" value="4">
+                    <label for="check-egg">add</label>
+                </div>
+                <div class="col-6 img-container">
+                    <div class="img-box-container">
+                        <img src="./img/lettuce.svg" alt="Lettuce Image">
+                    </div>
+                    <span>Lettuce</span>
+                    <input type="checkbox" id="check-lettuce" class="ingredients" value="4">
+                    <label for="check-lettuce">add</label>
+                </div>
+                <div class="col-6 img-container">
+                    <div class="img-box-container">
+                        <img src="./img/mustard.svg" alt="Mustard Image">
+                    </div>
+                    <span>Mustard</span>
+                    <input type="checkbox" id="check-mustard" class="ingredients" value="2">
+                    <label for="check-mustard">add</label>
+                </div>
+                <div class="col-6 img-container">
+                    <div class="img-box-container">
+                        <img src="./img/ketchup.svg" alt="Ketchup Image">
+                    </div>
+                    <span>Ketchup</span>
+                    <input type="checkbox" id="check-ketchup" class="ingredients" value="2">
+                    <label for="check-ketchup">add</label>
+                </div>
+            </section>
+
+            <section>
+                <div class="sale-code-container">
+                    <span>Discount Coupon</span>
+                    <input type="text" id="text-promo" class="sale-code" placeholder="Type here..">
+                    <label for="text-promo"></label>
+                </div>
+    
+                <div class="button-calculate">
+                    <button id="sum-button">calculate</button>
+                </div>
+            </section>
+
+            <footer>
+                <div>TOTAL PRICE</div>
+                <div id="total-price">$ 10</div>
+            </footer>
         </div>
-
     </div>
-
-    </div>
-    </div>
-
 
     <script src="js/script.js"></script>
 </body>

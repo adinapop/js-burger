@@ -6,6 +6,7 @@ calculateButton.addEventListener ('click', function() {
     var sumPrice = 10; 
     var checkIngredients = document.getElementsByClassName("ingredients");
     var promoCode = "JUNE20";
+    var promoPercentage = 20;
     var promoCodeAdded = document.getElementById("text-promo");
     
     for (var i = 0; i < checkIngredients.length; i++) {
@@ -15,14 +16,11 @@ calculateButton.addEventListener ('click', function() {
         }
     }
     
+    var resultPromo = (sumPrice * ((100 - promoPercentage) / 100)).toFixed(2);
     if (promoCodeAdded.value === promoCode) {
         alert("Discount code applied! Press OK to see your new Burger Price!")
-        sumResult.innerHTML = "$ " + (sumPrice * ((100 - 20) / 100)).toFixed(2);
+        sumResult.innerHTML = "$ " + resultPromo;
+    } else if (promoCodeAdded.value.length > 0) {
+        alert("Your discount code is invalid!");
     } 
-    // else {
-    //     alert("Your discount code is invalid!");
-    // } 
 });
-
-// PROBLEM1: Se metto value=20 all'interno di input in HTML esce fuori la scritta 20 nel placeholder
-// PROBLEM2: Non capisco perché non funziona .value nel promoCodeAdded e stampa l'alert anche quando non c'è nulla
